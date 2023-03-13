@@ -8,6 +8,9 @@ Download the docker-compose.yml file
 Create the directory structure under home
 `mkdir -p ./dags ./logs ./plugins`
 
+On Linux, configure the host user id
+`echo -e "AIRFLOW_UID=$(id -u)" > .env`
+
 Run the following to initialise the database:
 `docker compose up airflow-init`
 
